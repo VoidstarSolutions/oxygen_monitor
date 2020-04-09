@@ -7,6 +7,7 @@
 
 #include "sam.h"
 #include "FreeRTOS.h"
+#include "task.h"
 
 #ifndef __TEST
 int main(void)
@@ -16,6 +17,6 @@ int testable_main(void)
 {
     /* Initialize the SAM system */
     SystemInit();
-    
+    vTaskStartScheduler();
     return 0;
 }

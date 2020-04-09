@@ -57,6 +57,8 @@
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: TRUE
+  :includes:
+    - FreeRTOS.h
   :plugins:
     - :ignore
     - :callback
