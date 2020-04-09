@@ -1,6 +1,6 @@
 language: c
 before_install:
-- rvm install 2.1.5
+- rvm install 2.4
 - gem install ceedling
 jobs:
   run_test:
