@@ -47,9 +47,9 @@
 #define configCPU_CLOCK_HZ				( system_clock_source_get_hz( SYSTEM_CLOCK_SOURCE_DFLL ) )
 #define configTICK_RATE_HZ				( ( TickType_t ) 500 )
 #define configMAX_PRIORITIES			( 5 )
-#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 70 )
-#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 16000 ) )
-#define configMAX_TASK_NAME_LEN			( 5 )
+#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 128 )
+#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 0 ) )
+#define configMAX_TASK_NAME_LEN			( 16 )
 #define configUSE_TRACE_FACILITY		1
 #define configUSE_16_BIT_TICKS			0
 #define configIDLE_SHOULD_YIELD			1
@@ -62,6 +62,7 @@
 #define configUSE_COUNTING_SEMAPHORES	1
 #define configUSE_QUEUE_SETS			1
 #define configSUPPORT_STATIC_ALLOCATION 1
+#define configSUPPORT_DYNAMIC_ALLOCATION 0
 
 /* Run time stats related definitions. */
 void vMainConfigureTimerForRunTimeStats( void );
