@@ -93,7 +93,7 @@ DEFAULT_TEST_FILE_PREPROCESSOR_TOOL = {
   }
 
 # Disable the -MD flag for OSX LLVM Clang, since unsupported
-if RUBY_PLATFORM =~ /darwin/ && `gcc --version 2> /dev/null` =~ /Apple LLVM version .* \(clang/m # OSX w/LLVM Clang
+if RUBY_PLATFORM =~ /darwin/ 
   MD_FLAG = '' # Clang doesn't support the -MD flag
 else
   MD_FLAG = '-MD'

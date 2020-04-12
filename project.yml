@@ -75,8 +75,6 @@
     :executable: gcc
     :arguments:
       - -g
-      - -m32
-      - -mthumb
       - -Wall
       - -Wno-address
       - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
@@ -84,12 +82,8 @@
       - -c ${1}
       - -o ${2}
   :test_linker:
-    :executable: arm-none-eabi-gcc
+    :executable: gcc
     :arguments:
-      - -m32
-      - --specs=nosys.specs
-      - -T src/samc21/gcc/gcc/samc21e18a_flash.ld
-      - -Xlinker -Map=build/release/output.map
       - ${1}
       - -o ${2}
   :release_compiler:
