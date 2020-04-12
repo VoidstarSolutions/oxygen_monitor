@@ -1,12 +1,33 @@
 #include "can_task.h"
 
-void vCANTaskStart( uint16_t usStackSize, unsigned portBASE_TYPE uxPriority )
+#include "FreeRTOS.h"
+#include "portmacro.h"
+#include "task.h"
+
+#define UX_CAN_TASK_STACK_SIZE 512ul
+#define UX_CAN_TASK_PRIORITY 1ul
+
+static TaskHandle_t xCANTaskHandle;
+static StaticTask_t xCANTask;
+static StackType_t xCANTaskStack[UX_CAN_TASK_STACK_SIZE];
+
+static void prvCanTask(void *pvParameters);
+static void prvConfigureCan(void);
+
+void vCANTaskStart(void)
 {
-	/* Create that task that handles the console itself. */
-	xTaskCreate( 	prvCanTask,			/* The task that implements the command console. */
-					"CLI",								/* Text name assigned to the task.  This is just to assist debugging.  The kernel does not use this name itself. */
-					usStackSize,						/* The size of the stack allocated to the task. */
-					NULL,								/* The parameter is not used, so NULL is passed. */
-					uxPriority,							/* The priority allocated to the task. */
-					NULL );								/* A handle is not required, so just pass NULL. */
+	xCANTaskHandle = xTaskCreateStatic(prvCanTask,
+									   "CAN",
+									   UX_CAN_TASK_STACK_SIZE,
+									   NULL,
+									   UX_CAN_TASK_PRIORITY,
+									   xCANTaskStack,
+									   &xCANTask);
+}
+
+static void prvCanTask(void *pvParameters)
+{
+}
+static void prvConfigureCan(void)
+{
 }
