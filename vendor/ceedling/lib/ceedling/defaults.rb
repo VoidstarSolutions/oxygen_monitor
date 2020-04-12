@@ -96,7 +96,7 @@ DEFAULT_TEST_FILE_PREPROCESSOR_TOOL = {
 if RUBY_PLATFORM =~ /darwin/ 
   MD_FLAG = '' # Clang doesn't support the -MD flag
 else
-  MD_FLAG = '-MD'
+  MD_FLAG = '-MD -m32'
 end
 
 DEFAULT_TEST_DEPENDENCIES_GENERATOR_TOOL = {
