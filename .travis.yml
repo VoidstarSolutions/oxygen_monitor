@@ -9,6 +9,7 @@ matrix:
 before_install:
   - rvm install 2.4
   - gem install ceedling
+  - sudo apt-get install g++-multilib
   - pushd .
   - cd ~
   - mkdir arm-gcc-toolchain
