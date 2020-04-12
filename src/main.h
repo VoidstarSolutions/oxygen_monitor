@@ -1,9 +1,9 @@
 /*
- * $projectname$.c
+ * main.h
  *
- * Created: $date$
- * Author : $user$
- */ 
+ * Created: 04/12/20
+ * Author : Zachary Heylmun
+ */
 
 #ifndef MAIN_H
 #define MAIN_H
