@@ -5,6 +5,8 @@
  * Author : Zachary Heylmun
  */
 
+#include "main.h"
+
 #include "sam.h"
 #include "atmel_start.h"
 #include "FreeRTOS.h"

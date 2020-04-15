@@ -1,3 +1,10 @@
+/*
+ * task_startup.c
+ *
+ * Created: 04/12/20
+ * Author : Zachary Heylmun
+ */
+
 #include "task_startup.h"
 
 static StaticTask_t xIdleTask;
@@ -18,4 +25,9 @@ void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackT
     *ppxTimerTaskTCBBuffer = &xTimerTask;
     *ppxTimerTaskStackBuffer = xTimerTaskStack;
     *pulTimerTaskStackSize = configTIMER_TASK_STACK_DEPTH;
+}
+
+int vStartAllTheTasks()
+{
+    return -1;
 }

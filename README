@@ -1,3 +1,5 @@
 # Oxygen Monitor
-[![Build Status](https://travis-ci.com/VoidstarSolutions/oxygen_monitor.svg?branch=master)](https://travis-ci.com/VoidstarSolutions/oxygen_monitor)
 
+[![Build Status](https://travis-ci.com/VoidstarSolutions/oxygen_monitor.svg?branch=master)](https://travis-ci.com/VoidstarSolutions/oxygen_monitor)
+## Summary
+The oxygen monitor firmware monitors the status of the connected oxygen cell, and broadcasts the average measured voltage at 10hz via CAN.

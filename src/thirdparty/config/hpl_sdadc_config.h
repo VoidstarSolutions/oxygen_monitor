@@ -69,7 +69,7 @@
 // <i> When enabled, the ADC is in free running mode and a new conversion will be initiated when a previous conversion completes. (FREERUN)
 // <id> sdadc_freerunning_mode
 #ifndef CONF_SDADC_FREERUN
-#define CONF_SDADC_FREERUN 0
+#define CONF_SDADC_FREERUN 1
 #endif
 
 // <q> Chopper at input
