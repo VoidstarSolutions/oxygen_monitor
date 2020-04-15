@@ -16,6 +16,7 @@ IndentCaseLabels: true
 SortIncludes: 'true'
 SpaceAfterCStyleCast: 'true'
 SpaceBeforeAssignmentOperators: 'true'
+
 SpaceBeforeParens: ControlStatements
 SpacesInCStyleCastParentheses: 'false'
 

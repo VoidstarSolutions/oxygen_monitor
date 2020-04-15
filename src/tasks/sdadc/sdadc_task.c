@@ -7,7 +7,10 @@
 
 #include "sdadc_task.h"
 
+#include <stdint.h>
+
 #include "atmel_start.h"
+
 
 static void prvConversionCallback(const struct adc_async_descriptor *const descr, const uint8_t channel);
 

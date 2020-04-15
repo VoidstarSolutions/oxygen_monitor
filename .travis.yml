@@ -20,4 +20,5 @@ before_install:
   - export PATH=$HOME/arm-gcc-toolchain/bin:$PATH
 
 script:
-  - ceedling
+  - ceedling test:all
+  - ceedling release

@@ -102,7 +102,7 @@
     :executable: arm-none-eabi-gcc
     :arguments:
       - --specs=nosys.specs
-      - -T src/samc21/gcc/gcc/samc21e18a_flash.ld
+      - -T src/thirdparty/samc21/gcc/gcc/samc21e18a_flash.ld
       - -Xlinker -Map=build/release/output.map
       - ${1}
       - -o ${2}
