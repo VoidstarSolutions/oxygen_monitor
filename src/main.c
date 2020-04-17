@@ -9,9 +9,6 @@
 
 #include "sam.h"
 #include "atmel_start.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "can_task.h"
 
 #ifndef __TEST
 int main(void)
@@ -20,7 +17,6 @@ int testable_main(void)
 #endif
 {
 	atmel_start_init();
-	vCANTaskStart();
 	return 0;
 }
 

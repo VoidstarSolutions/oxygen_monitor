@@ -7,6 +7,10 @@
 
 #include "task_startup.h"
 
+#include "can_task.h"
+#include "sdadc_task.h"
+
+
 static StaticTask_t xIdleTask;
 static StackType_t uxIdleTaskStack[configMINIMAL_STACK_SIZE];
 
@@ -29,5 +33,7 @@ void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackT
 
 int vStartAllTheTasks()
 {
-    return -1;
+    //vSDCADCTaskStart();
+    vCANTaskStart();
+    return 0;
 }

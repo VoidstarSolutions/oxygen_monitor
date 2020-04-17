@@ -2,6 +2,8 @@
 #include "unity.h"
 
 #include "task_startup.h"
+#include "mock_can_task.h"
+#include "mock_sdadc_task.h"
 
 void setUp(void)
 {
@@ -45,5 +47,6 @@ void test_vApplicationGetTimerTaskMemory_ShouldReturnValidMemory(void)
 
 void test_vStartAllTheTasks(void)
 {
+    vCANTaskStart_Expect();
     TEST_ASSERT_EQUAL(0, vStartAllTheTasks());
 }
