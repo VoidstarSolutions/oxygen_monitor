@@ -47,6 +47,7 @@ void test_vApplicationGetTimerTaskMemory_ShouldReturnValidMemory(void)
 
 void test_vStartAllTheTasks(void)
 {
+    vSDADCTaskStart_Expect();
     vCANTaskStart_Expect();
     TEST_ASSERT_EQUAL(0, vStartAllTheTasks());
 }

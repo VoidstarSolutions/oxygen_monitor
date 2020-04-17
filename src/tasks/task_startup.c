@@ -33,7 +33,7 @@ void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackT
 
 int vStartAllTheTasks()
 {
-    //vSDCADCTaskStart();
+    vSDADCTaskStart();
     vCANTaskStart();
     return 0;
 }
